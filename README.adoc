@@ -1,0 +1,7 @@
+== Kafka with SASL
+
+Simple Kafka setup with one broker, just the bare minimum to make it a bit more "realistic".
+
+== Usage
+
+Run `docker compose up`.
