@@ -2,6 +2,35 @@
 
 Simple Kafka setup with one broker, just the bare minimum to make it a bit more "realistic".
 
+For something more complete, up to date and properly documented just go https://github.com/confluentinc/cp-all-in-on https://github.com/confluentinc/cp-all-in-onee[here].
+
 == Usage
 
 Run `docker compose up`.
+
+.Consumer settings
+[source,python]
+---
+Consumer(
+{
+    'bootstrap.servers': 'localhost:9082',
+    'group.id': 'testgroup', 
+    'security.protocol' : 'SASL_PLAINTEXT', 
+    'sasl.username': 'admin', 
+    'sasl.password': 'admin-secret', 
+    'sasl.mechanism':'PLAIN',
+})
+---
+
+.Producer settings
+[source,python]
+---
+Producer(
+{
+    'bootstrap.servers': 'localhost:9092',
+    'security.protocol' : 'SASL_PLAINTEXT',
+    'sasl.username': 'admin',
+    'sasl.password': 'admin-secret',
+    'sasl.mechanism':'PLAIN'
+})
+---
