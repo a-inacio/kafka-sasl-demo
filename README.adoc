@@ -14,10 +14,10 @@ Run `docker compose up`.
 Consumer(
 {
     'bootstrap.servers': 'localhost:9082',
-    'group.id': 'testgroup', 
-    'security.protocol' : 'SASL_PLAINTEXT', 
-    'sasl.username': 'admin', 
-    'sasl.password': 'admin-secret', 
+    'group.id': 'testgroup',
+    'security.protocol' : 'SASL_PLAINTEXT',
+    'sasl.username': 'admin',
+    'sasl.password': 'admin-secret'
     'sasl.mechanism':'PLAIN',
 })
 ---
